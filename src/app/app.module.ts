@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule, MatCommonModule, MatIconModule} from '@angular/material';
+import {NgxWheelModule} from 'ngx-wheel';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {MatCardModule, MatCommonModule, MatIconModule} from '@angular/material';
     BrowserAnimationsModule,
     MatCommonModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    NgxWheelModule
   ],
   providers: [],
   bootstrap: [AppComponent]
