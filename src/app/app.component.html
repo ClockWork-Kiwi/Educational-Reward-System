@@ -1,6 +1,7 @@
 <div class="row">
   <!-- STUDENTS' DIV -->
   <div class="col-6">
+    <input type="file" name="File Browser" (change)="fileSelected($event.target.files[0])" #fileBrowser>
     <div class="row pl-1">
       <mat-card class="col-4">
         <mat-card-title>
@@ -79,6 +80,7 @@
     </div>
   </div>
   <!-- WHEEL DIV -->
+  <!-- https://www.npmjs.com/package/ngx-wheel?activeTab=readme -->
   <div class="col-6">
   <ngx-wheel
     #wheel
