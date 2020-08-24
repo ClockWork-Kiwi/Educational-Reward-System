@@ -9,7 +9,8 @@ export class AppComponent implements OnInit {
 
   @ViewChild('fileBrowser', {static: false}) fileBrowser;
 
-  title = 'Educational-Reward-System';
+  public title = 'Educational-Reward-System';
+  public studentData = [];
 
   public items = [
     {fillStyle : '#eae56f', text : 'Prize 1'},
@@ -32,12 +33,17 @@ export class AppComponent implements OnInit {
       const studentData = e.target.result.split('\n');
       // Delete the first row (It's just the column names)
       studentData.splice(0, 1);
-      console.log(studentData);
+      const formattedData = [];
+      studentData.forEach(student => {
+        const splitLine = student.split(',');
+        formattedData.push({name: splitLine[0], stars: splitLine[1], rewards: splitLine[2]});
+      })
+      this.studentData = formattedData;
     });
   }
 
-  public starToggled(index) {
-    console.log(index);
+  public starToggled(index, student) {
+    console.log(index, student);
   }
 
   ngOnInit() {

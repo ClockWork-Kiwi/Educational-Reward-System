@@ -2,13 +2,13 @@
   <!-- STUDENTS' DIV -->
   <div class="col-6">
     <input type="file" name="File Browser" (change)="fileSelected($event.target.files[0])" #fileBrowser>
-    <div class="row pl-1">
+    <div class="row pl-1" *ngFor="let student of studentData">
       <mat-card class="col-4">
         <mat-card-title>
-          Student 1
+          {{student.name}}
         </mat-card-title>
         <mat-card-content>
-          Rewards here
+          {{student.rewards}}
         </mat-card-content>
       </mat-card>
       <mat-card class="col-8">
@@ -26,7 +26,7 @@
             <mat-icon class="px-3" aria-hidden="false" aria-label="Spin Checkpoint">sync</mat-icon>
           </div>
           <div class="row">
-            <app-toggle-star *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" [toggled]="false" (toggleChanged)="starToggled(i)"></app-toggle-star>
+            <app-toggle-star *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" [toggled]="(i < student.stars)" (toggleChanged)="starToggled(i, student)"></app-toggle-star>
           </div>
         </mat-card-content>
       </mat-card>
