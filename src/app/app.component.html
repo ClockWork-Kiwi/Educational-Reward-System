@@ -14,86 +14,39 @@
       <mat-card class="col-8">
         <mat-card-content>
           <div class="row">
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon"></mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon"></mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">sync</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon"></mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon"></mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon"></mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">sync</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon"></mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon"></mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">sync</mat-icon>
+            <mat-icon class="px-3" aria-hidden="false" aria-label="Space Filler"></mat-icon>
+            <mat-icon class="px-3" aria-hidden="false" aria-label="Space Filler"></mat-icon>
+            <mat-icon class="px-3" aria-hidden="false" aria-label="Spin Checkpoint">sync</mat-icon>
+            <mat-icon class="px-3" aria-hidden="false" aria-label="Space Filler"></mat-icon>
+            <mat-icon class="px-3" aria-hidden="false" aria-label="Space Filler"></mat-icon>
+            <mat-icon class="px-3" aria-hidden="false" aria-label="Space Filler"></mat-icon>
+            <mat-icon class="px-3" aria-hidden="false" aria-label="Spin Checkpoint">sync</mat-icon>
+            <mat-icon class="px-3" aria-hidden="false" aria-label="Space Filler"></mat-icon>
+            <mat-icon class="px-3" aria-hidden="false" aria-label="Space Filler"></mat-icon>
+            <mat-icon class="px-3" aria-hidden="false" aria-label="Spin Checkpoint">sync</mat-icon>
           </div>
           <div class="row">
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star_outline</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star_outline</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star_outline</mat-icon>
+            <app-toggle-star *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" [toggled]="false" (toggleChanged)="starToggled(i)"></app-toggle-star>
           </div>
         </mat-card-content>
       </mat-card>
-    </div>
-    <div class="row pl-1">
-      <mat-card class="col-4">
-        <mat-card-title>
-          Student 2
-        </mat-card-title>
-        <mat-card-content>
-          Rewards here
-        </mat-card-content>
-      </mat-card>
-      <mat-card class="col-8">
-        <mat-card-content>
-          <div class="row">
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon"></mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon"></mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">sync</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon"></mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon"></mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon"></mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">sync</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon"></mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon"></mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">sync</mat-icon>
-          </div>
-          <div class="row">
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star_outline</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star_outline</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star_outline</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star_outline</mat-icon>
-            <mat-icon class="px-3" aria-hidden="false" aria-label="Example home icon">star_outline</mat-icon>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </div>
+    </div>   
   </div>
   <!-- WHEEL DIV -->
   <!-- https://www.npmjs.com/package/ngx-wheel?activeTab=readme -->
   <div class="col-6">
-  <ngx-wheel
-    #wheel
-    width='600'
-    height='600'
-    spinDuration='8'
-    [disableSpinOnClick]='true'
-    [items]='items'
-    [innerRadius]='10'
-    [spinAmount]='10'
-    pointerStrokeColor='red'
-    pointerFillColor='purple'>
-  </ngx-wheel>
-</div>
+    <ngx-wheel
+      #wheel
+      width='600'
+      height='600'
+      spinDuration='8'
+      [disableSpinOnClick]='true'
+      [items]='items'
+      [innerRadius]='10'
+      [spinAmount]='10'
+      pointerStrokeColor='red'
+      pointerFillColor='purple'>
+    </ngx-wheel>
+  </div>
 </div>
 

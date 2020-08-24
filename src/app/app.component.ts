@@ -32,7 +32,12 @@ export class AppComponent implements OnInit {
       const studentData = e.target.result.split('\n');
       // Delete the first row (It's just the column names)
       studentData.splice(0, 1);
+      console.log(studentData);
     });
+  }
+
+  public starToggled(index) {
+    console.log(index);
   }
 
   ngOnInit() {
