@@ -1,13 +1,15 @@
-import {Component, ViewChild, OnInit} from '@angular/core';
+import {Component, ViewChild, OnInit, AfterViewInit} from '@angular/core';
+import { NgxWheelComponent } from 'ngx-wheel';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
 
   @ViewChild('fileBrowser', {static: false}) fileBrowser;
+  @ViewChild(NgxWheelComponent, {static: false}) wheel;
 
   public title = 'Educational-Reward-System';
   public studentData = [];
@@ -46,7 +48,16 @@ export class AppComponent implements OnInit {
     console.log(index, student);
   }
 
+  public spinWheel() {
+    this.wheel.reset();
+    this.wheel.spin();
+  }
+
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    // this.wheel.spin();
   }
 
 }
