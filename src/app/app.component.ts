@@ -17,10 +17,26 @@ export class AppComponent implements OnInit, AfterViewInit {
   public fileName;
 
   public items = [
-    {fillStyle : '#eae56f', text : 'Prize 1'},
-    {fillStyle : '#89f26e', text : 'Prize 2'},
-    {fillStyle : '#7de6ef', text : 'Prize 3'},
-    {fillStyle : '#e7706f', text : 'Prize 4'}
+    {fillStyle : '#ff000c', text : 'Add to Drawing'}, // RED
+    {fillStyle : '#e46c1b', text : 'Funny Picture'}, // ORANGE
+    {fillStyle : '#fff600', text : 'Choose a Game'}, // YELLOW
+    {fillStyle : '#19e622', text : 'Be the teacher'}, // GREEN
+    {fillStyle : '#00b2ff', text : 'Change name'}, // LIGHT BLUE
+    {fillStyle : '#7538c7', text : 'Dance Party'}, // PURPLE
+    {fillStyle : '#f00fdd', text : 'Your Choice'}, // PINK
+    {fillStyle : '#ff000c', text : 'Add to Drawing'}, // RED
+    {fillStyle : '#e46c1b', text : 'Funny Picture'}, // ORANGE
+    {fillStyle : '#fff600', text : 'Choose a Game'}, // YELLOW
+    {fillStyle : '#19e622', text : 'Be the teacher'}, // GREEN
+    {fillStyle : '#00b2ff', text : 'Change name'}, // LIGHT BLUE
+    {fillStyle : '#7538c7', text : 'Dance Party'}, // PURPLE
+    {fillStyle : '#f00fdd', text : 'Your Choice'}, // PINK
+    {fillStyle : '#ff000c', text : 'Add to Drawing'}, // RED
+    {fillStyle : '#e46c1b', text : 'Funny Picture'}, // ORANGE
+    {fillStyle : '#fff600', text : 'Choose a Game'}, // YELLOW
+    {fillStyle : '#19e622', text : 'Be the teacher'}, // GREEN
+    {fillStyle : '#00b2ff', text : 'Change name'}, // LIGHT BLUE
+    {fillStyle : '#7538c7', text : 'Dance Party'}, // PURPLE
   ];
 
   constructor() {}

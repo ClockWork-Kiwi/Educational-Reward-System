@@ -1,17 +1,18 @@
-<div class="background" [ngStyle]="{background: 'url(./assets/background.jpg)'}">
-  <div class="row">
+ <div class="row">
     <!-- STUDENTS' DIV -->
     <div class="col-6">
       <div class="row pl-1" *ngFor="let student of studentData">
-        <mat-card class="col-2 col-lg-4">
-          <mat-card-title>
-            {{student.name}}
+        <mat-card class="col-2 col-lg-4 bg-dark">
+          <mat-card-title style="text-warning">
+            <h1>
+              {{student.name}}
+            </h1>
           </mat-card-title>
           <mat-card-content>
             {{student.rewards}}
           </mat-card-content>
         </mat-card>
-        <mat-card class="col-10 col-lg-8">
+        <mat-card class="col-10 col-lg-8 bg-dark">
           <mat-card-content>
             <div class="row">
               <mat-icon class="px-3" style="width: 10%"  aria-hidden="false" aria-label="Space Filler"></mat-icon>
@@ -42,12 +43,12 @@
     <!-- WHEEL DIV -->
     <!-- https://www.npmjs.com/package/ngx-wheel?activeTab=readme -->
     <div class="col-6">
-      <div class="row">
+      <div class="row wheel">
         <ngx-wheel
           #wheel
           class="ml-auto mr-auto"
-          width="600"
-          height="600"
+          width="800"
+          height="800"
           spinDuration="8"
           [disableSpinOnClick]="true"
           [items]="items"
@@ -58,9 +59,8 @@
         </ngx-wheel>
       </div>
       <div class="row">
-        <mat-icon style="font-size: 100px" class="ml-auto mr-auto" aria-hidden="false" (click)="spinWheel()">refresh</mat-icon>
+        <mat-icon style="font-size: 100px" class="text-white mr-auto" aria-hidden="false" (click)="spinWheel()">refresh</mat-icon>
       </div>
     </div>
   </div>
   <input *ngIf="!!fileName" type="button" value="SAVE" (click)="saveData()">
-</div>
