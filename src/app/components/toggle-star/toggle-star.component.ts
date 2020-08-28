@@ -8,13 +8,17 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ToggleStarComponent implements OnInit {
 
   @Input() toggled: boolean;
+  @Input() toggleable: boolean
+  @Input() untoggleable: boolean
   @Output() toggleChanged = new EventEmitter<boolean>();
 
   constructor() { }
 
   toggleStar(newValue: boolean) {
-    this.toggled = newValue;
-    this.toggleChanged.emit(newValue);
+    if ( (newValue === false && this.untoggleable) || (newValue === true && this.toggleable) ) {
+      this.toggled = newValue;
+      this.toggleChanged.emit(newValue);
+    }
   }
 
   ngOnInit() {
