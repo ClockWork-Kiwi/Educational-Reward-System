@@ -14,29 +14,31 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   public title = 'Educational-Reward-System';
   public studentData = [];
+  public randomID = Math.round(Math.random() * 20);
+  public font = 'Alatsi'
   public fileName;
 
   public items = [
-    {fillStyle : '#ff000c', text : 'Add to Drawing'}, // RED
-    {fillStyle : '#e46c1b', text : 'Funny Picture'}, // ORANGE
-    {fillStyle : '#fff600', text : 'Choose a Game'}, // YELLOW
-    {fillStyle : '#19e622', text : 'Be the teacher'}, // GREEN
-    {fillStyle : '#00b2ff', text : 'Change name'}, // LIGHT BLUE
-    {fillStyle : '#7538c7', text : 'Dance Party'}, // PURPLE
-    {fillStyle : '#f00fdd', text : 'Your Choice'}, // PINK
-    {fillStyle : '#ff000c', text : 'Add to Drawing'}, // RED
-    {fillStyle : '#e46c1b', text : 'Funny Picture'}, // ORANGE
-    {fillStyle : '#fff600', text : 'Choose a Game'}, // YELLOW
-    {fillStyle : '#19e622', text : 'Be the teacher'}, // GREEN
-    {fillStyle : '#00b2ff', text : 'Change name'}, // LIGHT BLUE
-    {fillStyle : '#7538c7', text : 'Dance Party'}, // PURPLE
-    {fillStyle : '#f00fdd', text : 'Your Choice'}, // PINK
-    {fillStyle : '#ff000c', text : 'Add to Drawing'}, // RED
-    {fillStyle : '#e46c1b', text : 'Funny Picture'}, // ORANGE
-    {fillStyle : '#fff600', text : 'Choose a Game'}, // YELLOW
-    {fillStyle : '#19e622', text : 'Be the teacher'}, // GREEN
-    {fillStyle : '#00b2ff', text : 'Change name'}, // LIGHT BLUE
-    {fillStyle : '#7538c7', text : 'Dance Party'}, // PURPLE
+    {fillStyle : '#ff000c', text : 'Add to Drawing', id: 1, textFontFamily: this.font}, // RED
+    {fillStyle : '#e46c1b', text : 'Funny Picture', id: 2, textFontFamily: this.font}, // ORANGE
+    {fillStyle : '#fff600', text : 'Choose a Game', id: 3, textFontFamily: this.font}, // YELLOW
+    {fillStyle : '#19e622', text : 'Be the teacher', id: 4, textFontFamily: this.font}, // GREEN
+    {fillStyle : '#00b2ff', text : 'Change name', id: 5, textFontFamily: this.font}, // LIGHT BLUE
+    {fillStyle : '#7538c7', text : 'Dance Party', id: 6, textFontFamily: this.font}, // PURPLE
+    {fillStyle : '#f00fdd', text : 'Your Choice', id: 7, textFontFamily: this.font}, // PINK
+    {fillStyle : '#ff000c', text : 'Add to Drawing', id: 8, textFontFamily: this.font}, // RED
+    {fillStyle : '#e46c1b', text : 'Funny Picture', id: 9, textFontFamily: this.font}, // ORANGE
+    {fillStyle : '#fff600', text : 'Choose a Game', id: 10, textFontFamily: this.font}, // YELLOW
+    {fillStyle : '#19e622', text : 'Be the teacher', id: 11, textFontFamily: this.font}, // GREEN
+    {fillStyle : '#00b2ff', text : 'Change name', id: 12, textFontFamily: this.font}, // LIGHT BLUE
+    {fillStyle : '#7538c7', text : 'Dance Party', id: 13, textFontFamily: this.font}, // PURPLE
+    {fillStyle : '#f00fdd', text : 'Your Choice', id: 14, textFontFamily: this.font}, // PINK
+    {fillStyle : '#ff000c', text : 'Add to Drawing', id: 15, textFontFamily: this.font}, // RED
+    {fillStyle : '#e46c1b', text : 'Funny Picture', id: 16, textFontFamily: this.font}, // ORANGE
+    {fillStyle : '#fff600', text : 'Choose a Game', id: 17, textFontFamily: this.font}, // YELLOW
+    {fillStyle : '#19e622', text : 'Be the teacher', id: 18, textFontFamily: this.font}, // GREEN
+    {fillStyle : '#00b2ff', text : 'Change name', id: 19, textFontFamily: this.font}, // LIGHT BLUE
+    {fillStyle : '#7538c7', text : 'Dance Party', id: 20, textFontFamily: this.font}, // PURPLE
   ];
 
   constructor() {}
@@ -99,8 +101,13 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   }
 
+  /* Runs when the user clicks the spin wheel button */
   public spinWheel() {
+    // Reset the wheel (doesn't seem to spin otherwise)
     this.wheel.reset();
+    // Randomly decide which segment the wheel is going to land on
+    this.randomID = Math.round(Math.random() * 20);
+    // Spin the wheel
     this.wheel.spin();
   }
 
@@ -108,7 +115,6 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    // this.wheel.spin();
   }
 
 }

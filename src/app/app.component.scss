@@ -1,11 +1,7 @@
-.background {
-	height: 100%;
-
-	background-position: center !important;
-	background-repeat: no-repeat !important;
-	background-size: cover !important;
+ngx-wheel {
+	transform: rotate(90deg) !important;
 }
 
-canvas {
-	transform: rotate(90deg) !important;
+mat-card {
+	background-color: black;
 }
