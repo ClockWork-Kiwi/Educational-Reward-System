@@ -29,6 +29,7 @@
             <div class="row">
               <app-toggle-star *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" 
                 style="width: 10%"
+                [ngStyle]="{'transform': 'rotate(' + starTilt + 'deg)'}"
                 [toggled]="(i < student.stars)"
                 [untoggleable]="i == student.stars - 1"
                 [toggleable]="i == student.stars"
@@ -46,7 +47,7 @@
       <div class="row wheel">
         <ngx-wheel
           #wheel
-          class="ml-auto mr-auto"
+          class="mr-auto"
           [width]="wheelSize"
           [height]="wheelSize"
           spinDuration="4"

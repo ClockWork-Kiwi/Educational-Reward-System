@@ -17,9 +17,10 @@ export class AppComponent implements OnInit, AfterViewInit {
   public randomID = Math.round(Math.random() * 20);
   public font = 'Alatsi'
   public fileName;
-  public wheelSize = window.innerWidth * 0.6;
-  public wheelTextSize = window.innerWidth * 0.02;
+  public wheelSize = window.innerWidth * 0.45;
+  public wheelTextSize = window.innerWidth * 0.015;
   public starTilt = 0;
+  public tiltDirection = 'clockwise';
 
   public items = [
     {fillStyle : '#ff000c', text : 'Add to Drawing', id: 1, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // RED
@@ -118,11 +119,11 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    // while (true) {
-    //   setTimeout(() => {
-    //     this.starTilt++;
-    //   }, 50)
-    // }
+    setInterval(() => {
+      this.tiltDirection === 'clockwise' ? this.starTilt++ : this.starTilt--;
+      if (this.starTilt >= 10) { this.tiltDirection = 'counter-clockwise' }
+      if (this.starTilt <= -10) { this.tiltDirection = 'clockwise' }
+    }, 50)
   }
 
 }
