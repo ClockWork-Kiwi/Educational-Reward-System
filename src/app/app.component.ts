@@ -17,28 +17,31 @@ export class AppComponent implements OnInit, AfterViewInit {
   public randomID = Math.round(Math.random() * 20);
   public font = 'Alatsi'
   public fileName;
+  public wheelSize = window.innerWidth * 0.6;
+  public wheelTextSize = window.innerWidth * 0.02;
+  public starTilt = 0;
 
   public items = [
-    {fillStyle : '#ff000c', text : 'Add to Drawing', id: 1, textFontFamily: this.font}, // RED
-    {fillStyle : '#e46c1b', text : 'Funny Picture', id: 2, textFontFamily: this.font}, // ORANGE
-    {fillStyle : '#fff600', text : 'Choose a Game', id: 3, textFontFamily: this.font}, // YELLOW
-    {fillStyle : '#19e622', text : 'Be the teacher', id: 4, textFontFamily: this.font}, // GREEN
-    {fillStyle : '#00b2ff', text : 'Change name', id: 5, textFontFamily: this.font}, // LIGHT BLUE
-    {fillStyle : '#7538c7', text : 'Dance Party', id: 6, textFontFamily: this.font}, // PURPLE
-    {fillStyle : '#f00fdd', text : 'Your Choice', id: 7, textFontFamily: this.font}, // PINK
-    {fillStyle : '#ff000c', text : 'Add to Drawing', id: 8, textFontFamily: this.font}, // RED
-    {fillStyle : '#e46c1b', text : 'Funny Picture', id: 9, textFontFamily: this.font}, // ORANGE
-    {fillStyle : '#fff600', text : 'Choose a Game', id: 10, textFontFamily: this.font}, // YELLOW
-    {fillStyle : '#19e622', text : 'Be the teacher', id: 11, textFontFamily: this.font}, // GREEN
-    {fillStyle : '#00b2ff', text : 'Change name', id: 12, textFontFamily: this.font}, // LIGHT BLUE
-    {fillStyle : '#7538c7', text : 'Dance Party', id: 13, textFontFamily: this.font}, // PURPLE
-    {fillStyle : '#f00fdd', text : 'Your Choice', id: 14, textFontFamily: this.font}, // PINK
-    {fillStyle : '#ff000c', text : 'Add to Drawing', id: 15, textFontFamily: this.font}, // RED
-    {fillStyle : '#e46c1b', text : 'Funny Picture', id: 16, textFontFamily: this.font}, // ORANGE
-    {fillStyle : '#fff600', text : 'Choose a Game', id: 17, textFontFamily: this.font}, // YELLOW
-    {fillStyle : '#19e622', text : 'Be the teacher', id: 18, textFontFamily: this.font}, // GREEN
-    {fillStyle : '#00b2ff', text : 'Change name', id: 19, textFontFamily: this.font}, // LIGHT BLUE
-    {fillStyle : '#7538c7', text : 'Dance Party', id: 20, textFontFamily: this.font}, // PURPLE
+    {fillStyle : '#ff000c', text : 'Add to Drawing', id: 1, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // RED
+    {fillStyle : '#e46c1b', text : 'Funny Picture', id: 2, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // ORANGE
+    {fillStyle : '#fff600', text : 'Choose a Game', id: 3, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // YELLOW
+    {fillStyle : '#19e622', text : 'Be the teacher', id: 4, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // GREEN
+    {fillStyle : '#00b2ff', text : 'Change name', id: 5, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // LIGHT BLUE
+    {fillStyle : '#7538c7', text : 'Dance Party', id: 6, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // PURPLE
+    {fillStyle : '#f00fdd', text : 'Your Choice', id: 7, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // PINK
+    {fillStyle : '#ff000c', text : 'Add to Drawing', id: 8, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // RED
+    {fillStyle : '#e46c1b', text : 'Funny Picture', id: 9, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // ORANGE
+    {fillStyle : '#fff600', text : 'Choose a Game', id: 10, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // YELLOW
+    {fillStyle : '#19e622', text : 'Be the teacher', id: 11, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // GREEN
+    {fillStyle : '#00b2ff', text : 'Change name', id: 12, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // LIGHT BLUE
+    {fillStyle : '#7538c7', text : 'Dance Party', id: 13, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // PURPLE
+    {fillStyle : '#f00fdd', text : 'Your Choice', id: 14, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // PINK
+    {fillStyle : '#ff000c', text : 'Add to Drawing', id: 15, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // RED
+    {fillStyle : '#e46c1b', text : 'Funny Picture', id: 16, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // ORANGE
+    {fillStyle : '#fff600', text : 'Choose a Game', id: 17, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // YELLOW
+    {fillStyle : '#19e622', text : 'Be the teacher', id: 18, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // GREEN
+    {fillStyle : '#00b2ff', text : 'Change name', id: 19, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // LIGHT BLUE
+    {fillStyle : '#7538c7', text : 'Dance Party', id: 20, textFontFamily: this.font, textFontSize: this.wheelTextSize}, // PURPLE
   ];
 
   constructor() {}
@@ -115,6 +118,11 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    // while (true) {
+    //   setTimeout(() => {
+    //     this.starTilt++;
+    //   }, 50)
+    // }
   }
 
 }

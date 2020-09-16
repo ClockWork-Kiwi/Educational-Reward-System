@@ -1,9 +1,9 @@
  <div class="row">
     <!-- STUDENTS' DIV -->
-    <div class="col-6">
+    <div class="col-6 d-flex flex-column" style="justify-content: center;">
       <div class="row pl-1" *ngFor="let student of studentData">
-        <mat-card class="col-2 col-lg-4">
-          <mat-card-title style="color: gold; font-family: 'Alatsi'">
+        <mat-card class="col-3">
+          <mat-card-title style="color: gold; font-family: 'Alatsi';">
             <h1>
               {{student.name}}
             </h1>
@@ -12,7 +12,7 @@
             {{student.rewards}}
           </mat-card-content>
         </mat-card>
-        <mat-card class="col-10 col-lg-8">
+        <mat-card class="col-9">
           <mat-card-content>
             <div class="row">
               <mat-icon style="width: 10%"  aria-hidden="false" aria-label="Space Filler"></mat-icon>
@@ -47,8 +47,8 @@
         <ngx-wheel
           #wheel
           class="ml-auto mr-auto"
-          width="800"
-          height="800"
+          [width]="wheelSize"
+          [height]="wheelSize"
           spinDuration="4"
           [idToLandOn]="randomID"
           [disableSpinOnClick]="true"
