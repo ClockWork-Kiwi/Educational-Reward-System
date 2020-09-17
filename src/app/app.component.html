@@ -4,7 +4,7 @@
       <div class="row pl-1" *ngFor="let student of studentData">
         <mat-card class="col-3">
           <mat-card-title style="color: gold; font-family: 'Alatsi';">
-            <h1>
+            <h1 style="font-size: 3.5vw;">
               {{student.name}}
             </h1>
           </mat-card-title>
@@ -26,9 +26,9 @@
               <img style="width: 10%" src="../assets/wheel-icon.png"  aria-hidden="false" aria-label="Spin Checkpoint">
               <mat-icon style="width: 10%"  aria-hidden="false" aria-label="Space Filler"></mat-icon>
             </div>
-            <div class="row">
-              <app-toggle-star *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" 
-                style="width: 10%"
+            <div class="row d-flex flex-row justify-content-center">
+              <app-toggle-star *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]"
+                class="flex-grow-1" 
                 [ngStyle]="{'transform': 'rotate(' + starTilt + 'deg)'}"
                 [toggled]="(i < student.stars)"
                 [untoggleable]="i == student.stars - 1"

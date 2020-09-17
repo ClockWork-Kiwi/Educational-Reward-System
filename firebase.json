@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/Educational-Reward-System",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "index.html"
+      }
+    ]
+  }
+}
