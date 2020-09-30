@@ -1,0 +1,25 @@
+[debug] [2020-09-30T05:46:01.944Z] ----------------------------------------------------------------------
+[debug] [2020-09-30T05:46:01.946Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\GGPC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-09-30T05:46:01.947Z] CLI Version:   8.10.0
+[debug] [2020-09-30T05:46:01.947Z] Platform:      win32
+[debug] [2020-09-30T05:46:01.947Z] Node Version:  v10.16.0
+[debug] [2020-09-30T05:46:01.948Z] Time:          Wed Sep 30 2020 18:46:01 GMT+1300 (New Zealand Daylight Time)
+[debug] [2020-09-30T05:46:01.948Z] ----------------------------------------------------------------------
+[debug] [2020-09-30T05:46:01.948Z] 
+[debug] [2020-09-30T05:46:01.955Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-09-30T05:46:01.956Z] > authorizing via signed-in user
+[debug] [2020-09-30T05:46:01.956Z] [iam] checking project educational-reward-system for permissions ["firebase.projects.get"]
+[debug] [2020-09-30T05:46:01.959Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/educational-reward-system:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-09-30T05:46:03.324Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 30 Sep 2020 05:46:03 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1003","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-30T05:46:03.325Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/educational-reward-system  
+ 
+[debug] [2020-09-30T05:46:03.884Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 30 Sep 2020 05:46:03 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from 'D:\Git Projects\Educational-Reward-System'...
+[info] 
+[debug] [2020-09-30T05:46:03.888Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/educational-reward-system/webApps/-/config  
+ 
+[debug] [2020-09-30T05:46:05.332Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 30 Sep 2020 05:46:05 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: dist/Educational-Reward-System {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mdist/Educational-Reward-System\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
